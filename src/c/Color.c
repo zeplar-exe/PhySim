@@ -2,7 +2,7 @@
 // Created by zande on 1/6/2023.
 //
 
-#include "h/Color.h"
+#include "../h/Color.h"
 
 struct Color Color_ctor(unsigned char r, unsigned char g, unsigned char b, unsigned char a) {
     struct Color color;
