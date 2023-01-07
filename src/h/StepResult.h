@@ -8,6 +8,4 @@ struct StepResult {
     int errorCount;
 };
 
-void StepResult_error(struct StepResult* result, char* error) {
-    result->errors[result->errorCount++] = error;
-}
+void StepResult_error(struct StepResult* result, char* error);

@@ -3,3 +3,7 @@
 //
 
 #include "h/StepResult.h"
+
+void StepResult_error(struct StepResult* result, char* error) {
+    result->errors[result->errorCount++] = error;
+}

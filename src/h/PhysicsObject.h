@@ -10,7 +10,7 @@
 struct PhysicsObject {
     char* id;
     struct Vector2 position;
-    struct Vector2[] vertices;
+    struct Vector2 vertices[];
 };
 
 struct PhysicsObject PhysicsObject_ctor(char* id) {
