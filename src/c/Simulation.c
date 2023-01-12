@@ -19,7 +19,7 @@ struct Simulation Simulation_ctor(char* id) {
     return simulation;
 }
 
-struct StepResult step(struct Simulation* simulation, unsigned int count) {
+struct StepResult Simulation_step(struct Simulation* simulation, unsigned int count) {
     struct StepResult result = {};
 
     for (unsigned int i = 0; i < count; i++) {
