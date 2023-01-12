@@ -9,14 +9,6 @@
 
 struct PhysicsObject {
     char* id;
-    struct Vector2 position;
-    struct Vector2 vertices[];
 };
 
-struct PhysicsObject PhysicsObject_ctor(char* id) {
-    struct PhysicsObject object;
-
-    object.id = id;
-
-    return object;
-}
+struct PhysicsObject PhysicsObject_ctor(char* id);

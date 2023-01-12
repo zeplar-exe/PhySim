@@ -1,4 +1,8 @@
-#include "StepResult.h"
+#include <StepResult.h>
+#include <Distance.h>
+#include <Mass.h>
+#include <Time.h>
+#include <PhysicsObject.h>
 
 #ifndef PHYSISIM_SIMULATION_H
 #define PHYSISIM_SIMULATION_H
@@ -9,29 +13,17 @@ struct Simulation {
     char* id;
     struct PhysicsObject* objects;
     unsigned int objectCount;
-    unsigned int stepTimeMs;
+
+    double gravity;
+
+    enum Distance defaultDistance;
+    enum Mass defaultMass;
+    enum Time defaultTime;
+
+    unsigned int stepUnitCount;
     unsigned int stepCount;
 };
 
-struct Simulation Simulation_ctor(char* id) {
-    struct Simulation simulation;
+struct Simulation Simulation_ctor(char* id);
 
-    simulation.id = id;
-    simulation.stepTimeMs = 1000; // 1 second/step
-
-    return simulation;
-}
-
-struct StepResult step(struct Simulation* simulation, unsigned int count) {
-    struct StepResult result = {};
-
-    for (unsigned int i = 0; i < count; i++) {
-        simulation->stepCount++;
-    }
-
-    return result;
-}
-
-void close(struct Simulation* simulation) {
-
-}
+struct StepResult step(struct Simulation* simulation, unsigned int count);

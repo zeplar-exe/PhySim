@@ -2,7 +2,7 @@
 // Created by zande on 1/6/2023.
 //
 
-#include "../h/Vector2.h"
+#include <Vector2.h>
 
 struct Vector2 Vector2_ctor(int x, int y) {
     struct Vector2 vector;
